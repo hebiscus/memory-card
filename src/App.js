@@ -38,11 +38,13 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='app-content'>
       <Header />
+      <div className='cards-container'>
       {cards.map(card => {
         return <Card key={card.id}/>
       })}
+      </div>
     </div>
   );
 }
