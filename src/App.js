@@ -1,6 +1,7 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import Card from './components/Card';
+import Header from './components/Header';
 
 function App() {
 
@@ -18,22 +19,27 @@ function App() {
 
   const [cards, setCards] = useState(initialCards)
 
-  useEffect(() => {
-    function shuffleArray(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [array[i], array[j]] = [array[j], array[i]];
-      }
+  // useEffect(() => {
+  //   function shuffleArray(array) {
+  //     for (let i = array.length - 1; i > 0; i--) {
+  //         const j = Math.floor(Math.random() * (i + 1));
+  //         [array[i], array[j]] = [array[j], array[i]];
+  //     }
 
-      // const shuffledCards = shuffleArray(cards);
-      // setCards(shuffledCards)
-    }
+  //     const shuffledCards = shuffleArray(cards);
+  //     setCards(shuffledCards)
+  //   }
 
-    shuffleArray(initialCards)
-  }, [cards])
+  //   shuffleArray(initialCards)
+  // }, [cards])
+
+  const handleCardClick = () => {
+
+  }
 
   return (
     <div>
+      <Header />
       {cards.map(card => {
         return <Card />
       })}
