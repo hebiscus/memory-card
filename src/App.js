@@ -41,7 +41,7 @@ function App() {
     <div>
       <Header />
       {cards.map(card => {
-        return <Card />
+        return <Card key={card.id}/>
       })}
     </div>
   );
