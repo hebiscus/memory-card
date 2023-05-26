@@ -3,7 +3,7 @@ import { useState } from 'react';
 function Card(props) {
 
     return (
-        <button>
+        <button id={props.id} onClick={props.handleCardClick}>
             <img></img>
         </button>
     )

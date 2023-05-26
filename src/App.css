@@ -4,6 +4,11 @@
   align-items: center;
 }
 
+.header {
+  display: flex;
+  gap: 25px;
+}
+
 .cards-container {
   display: flex;
   justify-content: space-around;

@@ -17,7 +17,9 @@ function App() {
     {src: "", id: 8},
   ];
 
-  const [cards, setCards] = useState(initialCards)
+  const [cards, setCards] = useState(initialCards);
+  const [currentScore, setCurrentScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
 
   // useEffect(() => {
   //   function shuffleArray(array) {
@@ -33,16 +35,17 @@ function App() {
   //   shuffleArray(initialCards)
   // }, [cards])
 
-  const handleCardClick = () => {
-
+  const handleCardClick = (e) => {
+    console.log(e.target.id)
+    setCurrentScore(count => count + 1)
   }
 
   return (
     <div className='app-content'>
-      <Header />
+      <Header currentScore={currentScore} bestScore={bestScore}/>
       <div className='cards-container'>
       {cards.map(card => {
-        return <Card key={card.id}/>
+        return <Card key={card.id} id={card.id} handleCardClick={handleCardClick}/>
       })}
       </div>
     </div>
