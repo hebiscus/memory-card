@@ -6,7 +6,6 @@ import Header from './components/Header';
 function App() {
 
   const initialCards = [
-    {src: "", id: 0},
     {src: "", id: 1},
     {src: "", id: 2},
     {src: "", id: 3},
@@ -18,6 +17,7 @@ function App() {
   ];
 
   const [cards, setCards] = useState(initialCards);
+  const [clickedCards, setClickedCards] = useState([])
   const [currentScore, setCurrentScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
 
@@ -36,8 +36,17 @@ function App() {
   // }, [cards])
 
   const handleCardClick = (e) => {
-    console.log(e.target.id)
-    setCurrentScore(count => count + 1)
+    const cardID = e.target.id
+    
+    if (!clickedCards.includes(cardID)) {
+      setClickedCards([...clickedCards, cardID]);
+      setCurrentScore(count => count + 1);
+      console.log(clickedCards)
+    } else {
+      setClickedCards([]);
+      setCurrentScore(0);
+      console.log("uhoh, I was clicked before!")
+    }
   }
 
   return (
