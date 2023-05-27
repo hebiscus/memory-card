@@ -3,8 +3,8 @@ import { useState } from 'react';
 function Card(props) {
 
     return (
-        <button id={props.id} onClick={props.handleCardClick}>
-            <img></img>
+        <button onClick={props.handleCardClick}>
+            <img src={props.src} id={props.id} alt='' height={"250px"}></img>
         </button>
     )
 }

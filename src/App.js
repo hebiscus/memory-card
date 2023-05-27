@@ -2,18 +2,27 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import Card from './components/Card';
 import Header from './components/Header';
+import dog from './card-pictures/dog.jpg'
+import caiman from './card-pictures/caiman.jpg'
+import gecko from './card-pictures/gecko.jpg'
+import luzon from './card-pictures/luzon.jpg'
+import parrot from './card-pictures/parrot.jpg'
+import raccoon from './card-pictures/raccoon.jpg'
+import sneak from './card-pictures/sneak.jpg'
+import turtle from './card-pictures/turtle.jpg'
+
 
 function App() {
 
   const initialCards = [
-    {src: "", id: 1},
-    {src: "", id: 2},
-    {src: "", id: 3},
-    {src: "", id: 4},
-    {src: "", id: 5},
-    {src: "", id: 6},
-    {src: "", id: 7},
-    {src: "", id: 8},
+    {src: dog, id: 1},
+    {src: caiman, id: 2},
+    {src: gecko, id: 3},
+    {src: luzon, id: 4},
+    {src: parrot, id: 5},
+    {src: raccoon, id: 6},
+    {src: sneak, id: 7},
+    {src: turtle, id: 8},
   ];
 
   const [cards, setCards] = useState(initialCards);
@@ -54,7 +63,7 @@ function App() {
       <Header currentScore={currentScore} bestScore={bestScore}/>
       <div className='cards-container'>
       {cards.map(card => {
-        return <Card key={card.id} id={card.id} handleCardClick={handleCardClick}/>
+        return <Card key={card.id} id={card.id} src={card.src} handleCardClick={handleCardClick}/>
       })}
       </div>
     </div>
