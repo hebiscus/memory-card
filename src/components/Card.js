@@ -4,7 +4,7 @@ function Card(props) {
 
     return (
         <button onClick={props.handleCardClick}>
-            <img src={props.src} id={props.id} alt='' height={"250px"}></img>
+            <img src={props.src} id={props.id} alt='' height={"250px"} width={"250px"}></img>
         </button>
     )
 }
