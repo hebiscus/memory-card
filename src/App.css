@@ -7,10 +7,24 @@
 .header {
   display: flex;
   gap: 25px;
+  font-size: 2em;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .cards-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 7px
+}
+
+.cards-container > button {
+  border: none;
+  background: inherit;
+  cursor: pointer;
+}
+
+.cards-container > button:hover {
+  transform: scale(1.03);
 }
