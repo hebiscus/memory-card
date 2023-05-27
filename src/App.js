@@ -50,6 +50,13 @@ function App() {
     if (!clickedCards.includes(cardID)) {
       setClickedCards([...clickedCards, cardID]);
       setCurrentScore(count => count + 1);
+      setBestScore(count => {
+        if (currentScore >= bestScore) {
+          return count + 1
+        } else {
+          return bestScore
+        }
+      })
       console.log(clickedCards)
     } else {
       setClickedCards([]);
