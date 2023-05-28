@@ -6,17 +6,28 @@
 
 .header {
   display: flex;
-  gap: 25px;
-  font-size: 2em;
+  flex-direction: column;
+  align-items: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  gap:11px;
+}
+
+.points {
+  display: flex;
+  gap: 25px;
+  font-size: 2em;
+}
+
+.header > h5 {
+  font-size: 1.3em;
 }
 
 .cards-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 7px
+  gap: 18px
 }
 
 .cards-container > button {
