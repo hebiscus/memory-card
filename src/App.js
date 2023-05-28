@@ -30,19 +30,17 @@ function App() {
   const [currentScore, setCurrentScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
 
-  // useEffect(() => {
-  //   function shuffleArray(array) {
-  //     for (let i = array.length - 1; i > 0; i--) {
-  //         const j = Math.floor(Math.random() * (i + 1));
-  //         [array[i], array[j]] = [array[j], array[i]];
-  //     }
-
-  //     const shuffledCards = shuffleArray(cards);
-  //     setCards(shuffledCards)
-  //   }
-
-  //   shuffleArray(initialCards)
-  // }, [cards])
+  useEffect(() => {
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+    const shuffledCards = shuffleArray(cards);
+    setCards(shuffledCards)
+  })
 
   const handleCardClick = (e) => {
     const cardID = e.target.id
