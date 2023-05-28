@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/memory-card/static/css/main.f69867ff.css",
+    "main.js": "/memory-card/static/js/main.e59fec1f.js",
+    "static/media/parrot.jpg": "/memory-card/static/media/parrot.dad23543cbb57d897d5c.jpg",
+    "static/media/turtle.jpg": "/memory-card/static/media/turtle.c8a75a2e3cf545394c62.jpg",
+    "static/media/caiman.jpg": "/memory-card/static/media/caiman.aef8e4fa82db3457d86d.jpg",
+    "static/media/raccoon.jpg": "/memory-card/static/media/raccoon.a42cf1d7f78ed7a84efc.jpg",
+    "static/media/sneak.jpg": "/memory-card/static/media/sneak.d01fa91c1426b23611ed.jpg",
+    "static/media/dog.jpg": "/memory-card/static/media/dog.6662af37088d963a61b4.jpg",
+    "static/media/luzon.jpg": "/memory-card/static/media/luzon.a6c5f30819167eba1bee.jpg",
+    "static/media/gecko.jpg": "/memory-card/static/media/gecko.cb67e2e166b2f2b5aa1a.jpg",
+    "index.html": "/memory-card/index.html",
+    "main.f69867ff.css.map": "/memory-card/static/css/main.f69867ff.css.map",
+    "main.e59fec1f.js.map": "/memory-card/static/js/main.e59fec1f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f69867ff.css",
+    "static/js/main.e59fec1f.js"
+  ]
+}
