@@ -24,10 +24,11 @@
 }
 
 .cards-container {
+  max-width: 1320px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 18px
+  gap: 18px;
 }
 
 .cards-container > button {
