@@ -11,10 +11,14 @@ import raccoon from './card-pictures/raccoon.jpg'
 import sneak from './card-pictures/sneak.jpg'
 import turtle from './card-pictures/turtle.jpg'
 
+interface Card {
+  src: any,
+  id: number
+}
 
 function App() {
 
-  const initialCards = [
+  const initialCards: Card[] = [
     {src: dog, id: 1},
     {src: caiman, id: 2},
     {src: gecko, id: 3},
@@ -31,7 +35,7 @@ function App() {
   const [bestScore, setBestScore] = useState(0);
 
   useEffect(() => {
-    function shuffleArray(array) {
+    function shuffleArray(array: Card[]) {
       for (let i = array.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
           [array[i], array[j]] = [array[j], array[i]];
