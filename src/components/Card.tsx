@@ -1,10 +1,13 @@
-import { useState } from 'react';
+interface CardProps {
+    id: number,
+    src: any,
+    handleCardClick: any
+}
 
-function Card(props) {
-
+function Card({id, src, handleCardClick}: CardProps) {
     return (
-        <button onClick={props.handleCardClick}>
-            <img src={props.src} id={props.id} alt='' height={"250px"} width={"250px"}></img>
+        <button onClick={handleCardClick}>
+            <img src={src} id={`${id}`} alt='' height={"250px"} width={"250px"}></img>
         </button>
     )
 }

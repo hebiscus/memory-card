@@ -30,7 +30,7 @@ function App() {
   ];
 
   const [cards, setCards] = useState(initialCards);
-  const [clickedCards, setClickedCards] = useState([])
+  const [clickedCards, setClickedCards] = useState<string[]>([])
   const [currentScore, setCurrentScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
 
@@ -43,11 +43,12 @@ function App() {
       return array;
     }
     const shuffledCards = shuffleArray(cards);
-    setCards(shuffledCards)
+    setCards(shuffledCards);
   })
 
-  const handleCardClick = (e) => {
-    const cardID = e.target.id
+  const handleCardClick = (e: Event) => {
+    const target = e.target as HTMLButtonElement;
+    const cardID = target.id;
     
     if (!clickedCards.includes(cardID)) {
       setClickedCards([...clickedCards, cardID]);
@@ -59,11 +60,10 @@ function App() {
           return bestScore
         }
       })
-      console.log(clickedCards)
     } else {
       setClickedCards([]);
       setCurrentScore(0);
-      console.log("uhoh, I was clicked before!")
+      console.log("uhoh, I was clicked before!");
     }
   }
 
